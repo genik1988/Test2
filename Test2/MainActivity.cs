@@ -19,9 +19,19 @@ namespace Test2
 			// Get our button from the layout resource,
 			// and attach an event to it
 			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
+
 			button.Click += delegate {
+				button.Text = string.Format ("{0} clicks!", count++);
+			};
+
+			Button buttonEvg = FindViewById<Button> (Resource.Id.button1);
+
+			button.Click += delegate {
+<<<<<<< HEAD
 				button.Text = string.Format ("{0} clicks! Hello from Evgeny and Rich!", count++);
+=======
+				button.Text = string.Format ("Hello from Evgeny!");
+>>>>>>> ce42fa6034654f89bec0aa6cf56655a97f0eba2d
 			};
 		}
 	}
